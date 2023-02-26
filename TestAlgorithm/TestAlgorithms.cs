@@ -10,7 +10,7 @@ namespace TestAlgorithm
     {
         const int minValue = 0;
         const int maxValue = 10;
-        const int length = 10;
+        const int length = 100;
         [TestMethod]
         public void SelectionSortTest()
         {
@@ -21,6 +21,24 @@ namespace TestAlgorithm
             List<int> collection = new List<int>(expected);
             BaseSort<int> baseSort = new BaseSort<int>();
             baseSort.SetSort(new SelectionSort<int>(collection));
+            //act
+            expected.Sort();
+            baseSort.Sort();
+            //assert
+            for (int i = 0; i < expected.Count; i++)
+            {
+                Assert.AreEqual(expected[i], collection[i]);
+            }
+        }
+        [TestMethod]
+        public void GnomeSortTest()
+        {
+            //arrange
+            List<int> expected = new List<int>(length);
+            GenerateValueCollection.GenerateValue(expected, minValue, maxValue);
+            List<int> collection = new List<int>(expected);
+            BaseSort<int> baseSort = new BaseSort<int>();
+            baseSort.SetSort(new GnomeSort<int>(collection));
             //act
             expected.Sort();
             baseSort.Sort();
@@ -75,6 +93,24 @@ namespace TestAlgorithm
             GenerateValueCollection.GenerateValue(expected, minValue, maxValue);
             List<int> collection = new List<int>(expected);
             baseSort.SetSort(new BubleSort<int>(collection));
+            //act
+            expected.Sort();
+            baseSort.Sort();
+            //assert
+            for (int i = 0; i < expected.Count; i++)
+            {
+                Assert.AreEqual(expected[i], collection[i]);
+            }
+        }
+        [TestMethod]
+        public void GnomeSortSecondTest()
+        {
+            //arrange
+            BaseSort<int> baseSort = new BaseSort<int>();
+            List<int> expected = new List<int>(length);
+            GenerateValueCollection.GenerateValue(expected, minValue, maxValue);
+            List<int> collection = new List<int>(expected);
+            baseSort.SetSort(new GnomeSortSecond<int>(collection));
             //act
             expected.Sort();
             baseSort.Sort();
