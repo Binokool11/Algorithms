@@ -3,9 +3,11 @@
     public class GnomeSort<T> : BaseSort<T> where T : IComparable
     {
         public GnomeSort (List<T> collection) : base(collection) { } 
+
         public override void Sort()
         {
             int j = 0;  
+
             for (int i = 0; i < collection.Count; i++)
             {
                 for (int count = i + 1; count < collection.Count; count++)

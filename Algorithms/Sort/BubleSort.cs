@@ -9,7 +9,9 @@
             {
                 throw new ArgumentNullException(nameof(collection));
             }
+
             int maxLength = collection.Count - 1;
+
             while (maxLength > 0) 
             { 
                 for (int j = 0; j < maxLength; j++)

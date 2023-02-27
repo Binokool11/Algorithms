@@ -2,12 +2,15 @@
 {
     public class QuickSort<T> : BaseSort<T> where T : IComparable
     {
+
         public QuickSort(List<T> collection) : base(collection) { }
 
         public override void Sort()
         {
             QuickSortWrapper(collection,0,collection.Count - 1);
         }
+
+
         private void QuickSortWrapper(List<T> collection,int first, int last)
         {
             if (first >= last)
@@ -26,9 +29,6 @@
             Swap(collection,wall,last);
             QuickSortWrapper(collection,first,wall - 1);
             QuickSortWrapper(collection,wall + 1,last);
-
-
-
         }
     }
 }

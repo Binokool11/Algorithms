@@ -8,6 +8,8 @@
             int left = 0;
             int right = collection.Count - 1;
             int currentiIndex = 0;
+
+
             while(left < right)
             {
                 currentiIndex = left;

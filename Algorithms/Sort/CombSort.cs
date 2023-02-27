@@ -7,6 +7,7 @@
         public override void Sort()
         {
             int distance = collection.Count - 1;
+
             while (distance >= 1)
             {
                 for (int j = 0; j + distance < collection.Count; j++)

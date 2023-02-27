@@ -2,6 +2,7 @@
 {
     public class MergeSort<T> : BaseSort<T> where T : IComparable
     {
+
         public MergeSort(List<T> collection) : base(collection) { }
 
         public override void Sort()

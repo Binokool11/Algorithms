@@ -6,6 +6,7 @@
         protected List<T> collection {get;set;}
 
         public BaseSort() { }
+
         public BaseSort(List<T> collection)
         {
             if (collection != null)
@@ -17,10 +18,12 @@
                 throw new ArgumentNullException(nameof(collection));
             }
         }
+
         public void SetSort(ISort<T> objectSort)
         {
             this.objectSort = objectSort;
         }
+
         public virtual void Sort()
         {
             try
@@ -37,6 +40,7 @@
                 Console.WriteLine("Sort is null");
             }
         }
+
         protected void Swap(List<T> collection,int left,int right)
         {
             T current = collection[left];

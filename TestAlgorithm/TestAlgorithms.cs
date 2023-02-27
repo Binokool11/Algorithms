@@ -8,9 +8,11 @@ namespace TestAlgorithm
     [TestClass]
     public class TestAlgorithms
     {
+
         const int minValue = 0;
         const int maxValue = 10;
         const int length = 50000;
+
         [TestMethod]
         public void SelectionSortTest()
         {
@@ -28,6 +30,7 @@ namespace TestAlgorithm
                 Assert.AreEqual(expected[i], collection[i]);
             }
         }
+
         [TestMethod]
         public void GnomeSortTest()
         {
@@ -45,6 +48,7 @@ namespace TestAlgorithm
                 Assert.AreEqual(expected[i], collection[i]);
             }
         }
+
         [TestMethod]
         public void InsertSortTest()
         {
@@ -63,6 +67,7 @@ namespace TestAlgorithm
                 Assert.AreEqual(expected[i], collection[i]);
             }
         }
+
         [TestMethod]
         public void RedixSortTest()
         {
@@ -81,6 +86,7 @@ namespace TestAlgorithm
                 Assert.AreEqual(expected[i], collection[i]);
             }
         }
+
         [TestMethod]
         public void BubleSortTest()
         {
@@ -99,6 +105,7 @@ namespace TestAlgorithm
                 Assert.AreEqual(expected[i], collection[i]);
             }
         }
+
         [TestMethod]
         public void GnomeSortSecondTest()
         {
@@ -117,6 +124,7 @@ namespace TestAlgorithm
                 Assert.AreEqual(expected[i], collection[i]);
             }
         }
+
         [TestMethod]
         public void CombSortTest()
         {
@@ -135,6 +143,7 @@ namespace TestAlgorithm
                 Assert.AreEqual(expected[i], collection[i]);
             }
         }
+
         [TestMethod]
         public void QuickSortTest()
         {
@@ -152,6 +161,7 @@ namespace TestAlgorithm
                 Assert.AreEqual(expected[i], collection[i]);
             }
         }
+
         [TestMethod]
         public void CocktailSortTest()
         {
@@ -169,6 +179,7 @@ namespace TestAlgorithm
                 Assert.AreEqual(expected[i], collection[i]);
             }
         }
+
         [TestMethod]
         public void MergeSortTest()
         {
@@ -186,6 +197,7 @@ namespace TestAlgorithm
                 Assert.AreEqual(expected[i], collection[i]);
             }
         }
+
         [TestMethod]
         public void BaseSortTest()
         {

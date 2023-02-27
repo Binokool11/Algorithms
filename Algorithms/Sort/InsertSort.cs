@@ -6,12 +6,15 @@
 
         public override void Sort()
         {
+
             if (collection == null)
             {
                 throw new ArgumentNullException(nameof(collection));
             }
+
             int j = 0;
             int length = collection.Count;
+
             for (int i = 1; i < length; i++)
             {
                 j = i;
