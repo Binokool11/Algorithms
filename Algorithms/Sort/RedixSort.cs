@@ -1,10 +1,10 @@
-﻿using Algorithms.Interface;
-
-namespace Algorithms.Sort
+﻿namespace Algorithms.Sort
 {
     public class RedixSort<T> : BaseSort<T> where T : IComparable
     {
+
         public RedixSort(List<T> collection) : base(collection) { }
+
         public override void Sort()
         {
             Console.WriteLine(nameof(T));
@@ -13,17 +13,23 @@ namespace Algorithms.Sort
             {
                 items.Add(new List<T>());
             }
+
             int maxLength = GetMaxLength();
             int currentValue = 0;   
+
             for (int step = 0; step < maxLength; step++)
             {
+
+
                 for (int i = 0; i < collection.Count; i++)
                 {
                     currentValue = (collection[i].GetHashCode() % (int)Math.Pow(10 , step + 1)) / (int) Math.Pow(10 , step);
                     items[currentValue].Add(collection[i]);
                 }
 
+
                 collection.Clear();
+
 
                 foreach (var item in items)
                 {
@@ -32,12 +38,16 @@ namespace Algorithms.Sort
                         collection.Add(value);
                     }
                 }
+
+
                 foreach (var item in items)
                 {
                     item.Clear();
                 }
             }
         }
+
+
         private int GetMaxLength()
         {
             int maxLength = 0;
